@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+@import './abstracts/variables';
+
+* {
+    font-family: var(--ff-100)
+}
+
+body {
+    font-size: var(--fz-html);
+}
