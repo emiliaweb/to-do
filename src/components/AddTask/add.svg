@@ -1,0 +1,40 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" fill="#F5F5F5"/>
+<g id="Desktop - 4" clip-path="url(#clip0_0_1)">
+<rect width="1440" height="819" transform="translate(-366 -243)" fill="#181820"/>
+<g id="bg">
+<rect id="Rectangle 3" x="-366" y="-243" width="1440" height="819" fill="#181820"/>
+<g id="Frame" clip-path="url(#clip1_0_1)">
+<g id="Mask group">
+<mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-366" y="-243" width="1440" height="560">
+<g id="Group">
+<path id="Vector" d="M-366 317H1074V-243H-366V317Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_0_1)">
+<g id="Group_2">
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="todo">
+<g id="create">
+<rect id="Rectangle 1" x="-16" y="-14" width="740" height="60" rx="10" fill="#21212B"/>
+<g id="Group 1">
+<path id="Vector_2" d="M16 30C23.7 30 30 23.7 30 16C30 8.3 23.7 2 16 2C8.3 2 2 8.3 2 16C2 23.7 8.3 30 16 30Z" stroke="#FF8FC5" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M10.3999 16H21.5999" stroke="#FF8FC5" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M16 21.6V10.4" stroke="#FF8FC5" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1440" height="819" fill="white" transform="translate(-366 -243)"/>
+</clipPath>
+<clipPath id="clip1_0_1">
+<rect width="1440" height="560" fill="white" transform="matrix(-1 0 0 -1 1074 317)"/>
+</clipPath>
+</defs>
+</svg>

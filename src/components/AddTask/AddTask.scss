@@ -1,0 +1,17 @@
+.add {
+    &.block {
+        padding: 1.1rem 2rem;
+    }
+    &-icon {
+        flex-shrink: 0;
+    }
+    &-input {
+        background-color: transparent;
+        border: 0;
+        color: var(--clr-primary-100);
+        width: 100%;
+        &:focus {
+            outline: var(--clr-primary-100) solid 1px;
+        }
+    }
+}

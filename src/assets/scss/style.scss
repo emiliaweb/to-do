@@ -20,3 +20,26 @@ body {
     margin: 0 auto;
     max-width: 74rem;
 }
+
+.block {
+    border-radius: 1rem;
+    background: var(--clr-neutral-200);
+    padding: 1.8rem 2rem;
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+    }
+}
+
+.text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: var(--clr-primary-100);
+}

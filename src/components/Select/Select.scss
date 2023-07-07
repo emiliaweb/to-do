@@ -1,0 +1,37 @@
+.select {
+    padding: 0.8rem 1.8rem;
+    border-radius: 1rem;
+    background: var(--clr-neutral-300);
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    &-current {
+        display: flex;
+        align-items: center;
+        column-gap: .8rem;
+        position: relative;
+    }
+    &-options {
+        display: none;
+        padding-top: 1.4rem;
+        position: absolute;
+        left: 0;
+        top: calc(100% - 1rem);
+        width: 100%;
+        border-radius: 0rem 0rem 1rem 1rem;
+        background: var(--clr-neutral-300);
+        overflow: hidden;
+    }
+    &-option {
+        padding: 0.8rem 1.8rem;
+        transition: all .5s;
+        &:hover, &:focus {
+            background-color: var(--clr-neutral-400);
+        }
+    }
+    &--open {
+        .select-options {
+            display: block;
+        }
+    }
+}
