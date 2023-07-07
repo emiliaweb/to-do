@@ -1,4 +1,6 @@
 .select {
+    display: inline-block;
+    max-width: fit-content;
     padding: 0.8rem 1.8rem;
     border-radius: 1rem;
     background: var(--clr-neutral-300);
