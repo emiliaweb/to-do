@@ -11,6 +11,12 @@ html {
 }
 
 body {
+    background: url('../img/background.svg') center top / cover no-repeat;
     font-size: 1.8rem;
+    color: var(--clr-primary-100);
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 74rem;
+}
