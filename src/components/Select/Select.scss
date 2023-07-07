@@ -3,10 +3,13 @@
     max-width: fit-content;
     padding: 0.8rem 1.8rem;
     border-radius: 1rem;
-    background: var(--clr-neutral-300);
+    background: var(--clr-neutral-200);
     position: relative;
     cursor: pointer;
     z-index: 10;
+    &:hover, &:focus {
+        --clr-focus: var(--clr-neutral-300);
+    }
     &-current {
         display: flex;
         align-items: center;
@@ -21,7 +24,7 @@
         top: calc(100% - 1rem);
         width: 100%;
         border-radius: 0rem 0rem 1rem 1rem;
-        background: var(--clr-neutral-300);
+        background: var(--clr-neutral-200);
         overflow: hidden;
     }
     &-option {

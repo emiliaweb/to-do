@@ -1,6 +1,7 @@
 import Heading from "../Heading/Heading";
 import AddTask from "../AddTask/AddTask";
 import Filters from "../Filters/Filters";
+import TaskList from "../TaskList/TaskList";
 
 import '../../assets/scss/reset.scss';
 import '../../assets/scss/style.scss';
@@ -12,6 +13,7 @@ function App() {
             <Heading />
             <AddTask />
             <Filters />
+            <TaskList />
         </div>
     )
 }
