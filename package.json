@@ -36,7 +36,9 @@
     ]
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "classnames": "^2.3.2",
+    "react-redux": "^8.1.1",
     "sass": "^1.63.6"
   }
 }
