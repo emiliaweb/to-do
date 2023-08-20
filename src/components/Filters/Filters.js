@@ -1,47 +1,25 @@
-import Select from "../Select/Select"
+import Select from "../Select/Select";
+import { useSelector, useDispatch } from "react-redux";
+import { setFilter } from "../../slices/filtersSlice";
 
 import './Filters.scss';
 
 function Filters() {
-    const tasks = {
-        default: 'All tasks',
-        options: [
-            {
-                id: 'o1',
-                name: 'completed',
-                label: 'Completed'
-            },
-            {
-                id: 'o2',
-                name: 'ongoing',
-                label: 'Ongoing'
-            }
-        ]
+    const {view, priority} = useSelector(state => state.filters)
+    const dispatch = useDispatch()
+
+    const onSelect = (type, value) => {
+        dispatch(setFilter({type, value}));
     }
-    const priorities = {
-        default: 'No priority',
-        options: [
-            {
-                id: 'p1',
-                name: 'high',
-                label: 'High'
-            },
-            {
-                id: 'p2',
-                name: 'medium',
-                label: 'Medium'
-            },
-            {
-                id: 'p3',
-                name: 'low',
-                label: 'Low'
-            }
-        ]
-    }
+
     return (
         <div className="filters">
-            <Select data={tasks} />
-            <Select data={priorities} />
+            <Select data={view} onSelect={(value) => {
+                onSelect('view', value.name);
+            }}/>
+            <Select data={priority} onSelect={(value) => {
+                onSelect('priority', value.name);
+            }}/>
         </div>
     )
 }

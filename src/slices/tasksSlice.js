@@ -10,8 +10,19 @@ export const fetchTasks = createAsyncThunk(
     'tasks/fetchTasks',
     () => {
         const {request} = useHttp();
-        // return request('https://api.sheety.co/42a4cd5d344d9878b6f8dfad0fb05e83/tasks/tasks');
-        return request('https://sheet.best/api/sheets/d33d16d0-bc9d-4e87-a593-6c27bf68406f', 'GET', null, {'X-Api-Key': 'yx%tv2oz4np6umwbj$h$_JdfQZG!%dcKReBnZxF-3VXuhf9sjEA9QXV20fQD82pM'});
+        return request('http://localhost:3000/tasks');
+    }
+)
+
+export const updateTask = createAsyncThunk(
+    'tasks/updateTask',
+    ({id, body}) => {
+        const {request} = useHttp();
+        return request(
+            `http://localhost:3000/tasks/${id}`, 
+            'PUT', 
+            body
+        );
     }
 )
 
@@ -25,13 +36,27 @@ const tasksSlice = createSlice({
     },
     extraReducers: builder => {
         builder
-            .addCase(fetchTasks.pending, state => {state.tasksLoadingStatus = 'loading'})
+            .addCase(fetchTasks.pending, state => {
+                state.tasksLoadingStatus = 'loading';
+            })
             .addCase(fetchTasks.fulfilled, (state, action) => {
                 state.tasksLoadingStatus = 'idle';
                 state.tasks = action.payload;
-                // state.tasks = action.payload.tasks; // for sheety
             })
-            .addCase(fetchTasks.rejected, state => {state.tasksLoadingStatus = 'error'});
+            .addCase(fetchTasks.rejected, state => {
+                state.tasksLoadingStatus = 'error'
+            })
+            .addCase(updateTask.pending, state => {
+                state.tasksLoadingStatus = 'loading';
+            })
+            .addCase(updateTask.fulfilled, (state, action) => {
+                console.log(action.payload)
+                state.tasksLoadingStatus = 'idle';
+                // state.tasks = action.payload;
+            })
+            .addCase(updateTask.rejected, state => {
+                state.tasksLoadingStatus = 'error'
+            })
     }
 })
 

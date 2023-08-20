@@ -4,8 +4,12 @@ import classNames from 'classnames';
 import './Select.scss';
 import expand from './expand.svg';
 
-function Select({data}) {
+function Select({
+    data, 
+    onSelect = console.log
+}) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const current = data.options.find(item => item.name === data.current);
 
     const onClick = () => {
         setIsExpanded(state => !state);
@@ -15,7 +19,8 @@ function Select({data}) {
         return opts.map(item => {
             return (
                 <div 
-                    key={item.id}
+                    onClick={() => onSelect({label: item.label, name: item.name})}
+                    key={item.name}
                     className="select-option" 
                     tabIndex={0}>{item.label}</div>
             )
@@ -31,7 +36,7 @@ function Select({data}) {
             tabIndex={0} 
             aria-expanded={isExpanded}>
             <div className="select-current">
-                <span>{data.default}</span>
+                <span>{current.label}</span>
                 <img src={expand} alt="Show more" />
             </div>
             <div className="select-options">

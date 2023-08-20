@@ -9,12 +9,14 @@
     cursor: pointer;
     z-index: 10;
     transition: all .5s;
+    min-width: 14rem;
     &:hover, &--open {
         --clr-focus: var(--clr-neutral-300);
     }
     &-current {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         column-gap: .8rem;
         position: relative;
     }

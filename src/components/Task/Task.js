@@ -1,11 +1,22 @@
+import classNames from 'classnames';
 import './Task.scss';
 
-function Task({content, priority}) {
+function Task({
+    content, 
+    priority,
+    isCompleted,
+    onCheckboxClick = console.log
+}) {
+    const classes = classNames('block', 'task', isCompleted ? 'task--completed' : '')
+
     return (
-        <div className='block task'>
+        <div className={classes}>
             <div className="block-inner">
                 <div className="block-left">
-                    <div className="task-checkbox" tabIndex={0}></div>
+                    <div 
+                        onClick={onCheckboxClick}
+                        className="task-checkbox" 
+                        tabIndex={0}></div>
                     <div className="task-content">{content}</div>
                 </div>
                 <div className="block-right">

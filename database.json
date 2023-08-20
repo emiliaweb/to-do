@@ -1,34 +1,28 @@
 {
-    "tasks": [
-        {
-            "content": "Send client follow-up email",
-            "completed": false,
-            "id": 1,
-            "priority": "high"
-        },
-        {
-            "content": "Update social media profiles",
-            "completed": true,
-            "id": 2,
-            "priority": "low"
-        },
-        {
-            "content": "Research competitor pricing strategies",
-            "completed": false,
-            "id": 3,
-            "priority": "medium"
-        },
-        {
-            "content": "Prepare meeting agenda and materials",
-            "completed": false,
-            "id": 4,
-            "priority": "none"
-        },
-        {
-            "content": "Review project timeline and milestones",
-            "completed": true,
-            "id": 5,
-            "priority": "high"
-        }
-    ]
+  "tasks": [
+    {
+      "content": "Update social media profiles",
+      "completed": false,
+      "id": 2,
+      "priority": "low"
+    },
+    {
+      "content": "Research competitor pricing strategies",
+      "completed": false,
+      "id": 3,
+      "priority": "medium"
+    },
+    {
+      "content": "Prepare meeting agenda and materials",
+      "completed": false,
+      "id": 4,
+      "priority": "none"
+    },
+    {
+      "content": "Review project timeline and milestones",
+      "completed": false,
+      "id": 5,
+      "priority": "high"
+    }
+  ]
 }
