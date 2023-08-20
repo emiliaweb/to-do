@@ -23,6 +23,7 @@ function AddTask() {
         completed: false,
         id: Math.random().toString(36).substring(2, 9)
     });
+    const [formError, setFormError] = useState('')
     const {request} = useHttp();
     const dispatch = useDispatch();
 
@@ -33,11 +34,18 @@ function AddTask() {
 
     const onInput = (e) => {
         const target = e.target;
+        if (target.value) {
+            setFormError('')
+        }
         setFormData(state => ({...state, content: target.value}));
     }
 
     const onSubmit = (e) => {
         e.preventDefault();
+        if (formData.content.trim() === '') {
+            setFormError('Task name cannot be empty');
+            return
+        }
         request(
             'http://localhost:3000/tasks', 
             'POST', 
@@ -64,12 +72,18 @@ function AddTask() {
                             <img src={icon} alt="Create a task" />
                         </div>
                     </button>
+                    
                     <input onInput={onInput} value={formData.content} type="text" placeholder='Create a new task...' className='add-input' />
                 </div>
                 <div className="block-right">
                     <Select data={select} onSelect={onSelect} />
                 </div>
             </form>
+            {
+                formError 
+                ? <div className='add-error'>{formError}</div>
+                : null
+            }
         </div>
     )
 }

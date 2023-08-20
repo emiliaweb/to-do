@@ -1,7 +1,16 @@
 .add {
     margin-top: 8rem;
+    position: relative;
     &.block {
         padding: 1.1rem 2rem;
+    }
+    &-error {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        color: var(--clr-priority-high);
+        width: 100%;
+        font-size: 1.4rem;
     }
     &-button {
         perspective: 1px;
@@ -23,7 +32,8 @@
         background-color: transparent;
         border: 0;
         color: var(--clr-primary-100);
-        width: 100%;
+        flex-shrink: 0;
+        min-width: 100%;
         &:focus {
             outline: var(--clr-primary-100) solid 1px;
         }

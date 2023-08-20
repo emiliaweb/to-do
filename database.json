@@ -8,21 +8,27 @@
     },
     {
       "content": "Research competitor pricing strategies",
-      "completed": false,
+      "completed": true,
       "id": 3,
       "priority": "medium"
     },
     {
       "content": "Prepare meeting agenda and materials",
-      "completed": false,
+      "completed": true,
       "id": 4,
       "priority": "none"
     },
     {
       "content": "Review project timeline and milestones",
-      "completed": false,
+      "completed": true,
       "id": 5,
       "priority": "high"
+    },
+    {
+      "content": "Hello World",
+      "priority": "high",
+      "completed": true,
+      "id": "wfiqr7k"
     }
   ]
 }
